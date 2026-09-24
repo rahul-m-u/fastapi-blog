@@ -211,7 +211,7 @@ Once the server is running, you can explore and test the interactive API docs di
 ## 👤 Author
 
 **Rahul M U**
-- Email: [rmuwork51@gmail.com](mailto:rmuwork51@gmail.com)
+- Email: [rahulmu51@gmail.com](mailto:rahulmu51@gmail.com)
 - GitHub: [@rahul-m-u](https://github.com/rahul-m-u)
 
 ---
