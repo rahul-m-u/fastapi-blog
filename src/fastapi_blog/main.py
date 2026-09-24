@@ -328,9 +328,9 @@ def update_post_full(post_id: int, post_data: PostCreate, db: Annotated[Session,
     if not post:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Post not found")
 
-    if post.user_id != post.user_id:
+    if post_data.user_id != post.user_id:
         user_check = db.execute(
-            select(models.Users).where(models.Users.id == post.user_id)
+            select(models.Users).where(models.Users.id == post_data.user_id)
         )
         user_found = user_check.scalars().first()
         if not user_found:
