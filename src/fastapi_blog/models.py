@@ -11,12 +11,13 @@ class Users(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     username: Mapped[str] = mapped_column(String(40), unique=True, nullable=False)
+    name: Mapped[str | None] = mapped_column(String(120), nullable=True, default=None)
     email: Mapped[str] = mapped_column(String(120), unique=True, nullable=False)
     image_file: Mapped[str | None] = mapped_column(String(200), nullable=True, default=None)
     posts: Mapped[list['Post']] = relationship(back_populates="author")
 
     @property
-    def img_path(self):
+    def image_path(self):
         if self.image_file is None:
             return "/static/profile_pics/default.jpg"
 
